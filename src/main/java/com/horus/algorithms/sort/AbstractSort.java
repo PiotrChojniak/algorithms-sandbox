@@ -9,7 +9,7 @@ public abstract class AbstractSort<V extends Comparable<V>> {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
     private int lessC = 0;
-    private int swapC = 0;
+    int swapC = 0;
 
     public void sort(V[] values) {
         logger.debug("starting {}", getClass().getSimpleName());
