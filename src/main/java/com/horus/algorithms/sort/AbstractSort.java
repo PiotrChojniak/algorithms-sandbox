@@ -12,11 +12,11 @@ public abstract class AbstractSort<V extends Comparable<V>> {
     int swapC = 0;
 
     public void sort(V[] values) {
-        logger.debug("starting {}", getClass().getSimpleName());
-        logger.debug("Source array: {}", Arrays.toString(values));
+        logger.trace("starting {}", getClass().getSimpleName());
+        logger.trace("Source array: {}", Arrays.toString(values));
         sortImpl(values);
-        logger.debug("Sorted array: {}", Arrays.toString(values));
-        logger.debug("Operations sum: {},  less: {}, swap: {}", lessC + swapC, lessC, swapC);
+        logger.trace("Sorted array: {}", Arrays.toString(values));
+        logger.trace("Operations sum: {},  less: {}, swap: {}", lessC + swapC, lessC, swapC);
     }
 
     boolean isSorted(V[] values) {
