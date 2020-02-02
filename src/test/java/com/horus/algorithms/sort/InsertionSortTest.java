@@ -1,7 +1,9 @@
 package com.horus.algorithms.sort;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class InsertionSortTest {
 
@@ -11,6 +13,6 @@ class InsertionSortTest {
     void sort() {
         String[] values = SortTestDataProvider.stringArray();
         stringInsertionSort.sort(values);
-        Assert.assertTrue("Array not sorted!!!", stringInsertionSort.isSorted(values));
+        assertTrue(stringInsertionSort.isSorted(values), "Array not sorted!!!");
     }
 }

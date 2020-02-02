@@ -1,7 +1,9 @@
 package com.horus.algorithms.sort;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class MergeSortTest {
 
@@ -11,6 +13,6 @@ class MergeSortTest {
     void sort() {
         String[] values = SortTestDataProvider.stringArray();
         stringMergeSort.sort(values);
-        Assert.assertTrue("Array not sorted!!!", stringMergeSort.isSorted(values));
+        assertTrue(stringMergeSort.isSorted(values), "Array not sorted!!!");
     }
 }

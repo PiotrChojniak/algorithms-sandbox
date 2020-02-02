@@ -1,6 +1,6 @@
 package com.horus.algorithms.sort;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,6 +13,6 @@ class QuickSortTest {
     void sort() {
         String[] values = SortTestDataProvider.stringArray();
         stringQuickSort.sort(values);
-        Assert.assertTrue("Array not sorted!!!", stringQuickSort.isSorted(values));
+        assertTrue(stringQuickSort.isSorted(values), "Array not sorted!!!");
     }
 }
